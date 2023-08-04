@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
-import { registerUser } from "../redux/Actions/registerActions";
+// import { useDispatch } from "react-redux";
+// import { registerUser } from "../redux/Actions/registerActions";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { U_URL } from "../url";
 import { Link } from "react-router-dom";
+import "../Styles/registerStyle.css";
 
 export function Register() {
   const [enteredfirst, setFirstName] = useState("");
@@ -63,7 +64,7 @@ export function Register() {
     axios
       .post(U_URL, postData)
       .then((response) => {
-        console.log(response.data);
+        //console.log(response.data);
       })
       .catch((error) => {
         console.error("Error posting data:", error);
@@ -139,11 +140,11 @@ export function Register() {
           </Link>
         </label>
         <br />
-        <button className="Button" onClick={authenticate}>
+        <button className="Button-RS" onClick={authenticate}>
           Register
         </button>
 
-        <button className="Button" onClick={() => navigate("/")}>
+        <button className="Button-RS" onClick={() => navigate("/")}>
           Home
         </button>
       </div>

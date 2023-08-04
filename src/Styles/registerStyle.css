@@ -1,0 +1,20 @@
+.Button-RS {
+  background-color: #dd4792c9;
+  color: #ffffff;
+  display: block;
+  padding: 13px;
+  border-radius: 5px;
+  outline: none;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  width: 40%;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  transition: all 0.1s ease-in-out;
+  border: none;
+}
+.Button-RS:hover {
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02);
+}

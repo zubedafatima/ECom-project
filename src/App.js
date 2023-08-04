@@ -9,6 +9,8 @@ import { Register } from "./pages/register";
 import { AllUsers } from "./pages/allUsers";
 import { Detail } from "./layout/details";
 import { Products } from "./components/products";
+import { About } from "./pages/about";
+import { Contact } from "./pages/contact";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/details" element={<Detail />} />
         <Route path="/product" element={<Products />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
 
         <Route element={<Protected />}>
           <Route path="/user" element={<User />} />

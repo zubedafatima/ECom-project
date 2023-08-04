@@ -5,10 +5,12 @@
   font-weight: 600;
   margin: 0;
 }
+
 .NAV {
-  background-color: #000000;
+  margin-top: 30px;
+  background-color: #8c608d;
   color: #ffffff;
-  padding: 10px;
+  padding: 2px;
   display: flex;
   font-family: "Helvetica Neue", sans-serif;
   justify-content: space-between;
@@ -18,10 +20,12 @@
   position: sticky;
   top: 0;
   z-index: 1;
+  width: 100%;
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .NAV ul {
+  margin-top: 10px;
   list-style: none;
   text-decoration: none;
   display: flex;
@@ -38,12 +42,33 @@
   margin-right: 20px;
 }
 .HOME {
-  color: #080808;
+  margin-top: 50px;
+  background-color: #dbd8dbb6;
+  height: 150px;
   align-content: center;
   text-align: center;
   text-decoration: none;
   font-size: 20px;
   font-weight: 600;
+}
+
+.HOME ul {
+  display: flex;
+  color: rgb(44, 48, 94);
+  gap: 1rem;
+  font-size: 25px;
+  margin-top: 25px;
+  margin-left: 150px;
+  justify-content: flex-start;
+  font-weight: 400;
+  text-decoration: none;
+  list-style: none;
+}
+.home-LINK {
+  text-decoration: none;
+  color: rgb(44, 48, 94);
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .dashboard-main {

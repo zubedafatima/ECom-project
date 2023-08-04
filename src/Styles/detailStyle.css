@@ -1,30 +1,31 @@
-.Button {
-  background-color: #ffffffa9;
-  color: #000000;
+.Button-DS {
+  background-color: #eee7e7a9;
+  color: #131212;
   display: block;
-  padding: 13px;
-  border-radius: 5px;
+  padding: 10px;
+  border-radius: 2px;
   outline: none;
-  font-size: 18px;
+  font-size: 13px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   letter-spacing: 1.5px;
   font-weight: bold;
-  width: 100%;
+  width: 95%;
   cursor: pointer;
-  margin-bottom: 2rem;
   transition: all 0.1s ease-in-out;
   border: none;
 }
 
-.Button:hover {
+.Button-DS:hover {
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.15);
-  color: #0e354d;
-  /* background-color: #738fa0; */
+  background-color: #000000;
+  color: #ffffff;
   transform: scale(1.02);
   cursor: grab;
 }
 
 .DETAILS {
-  height: 100%;
+  height: 800px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,56 +33,71 @@
   padding: 2rem;
 }
 .details-container {
+  background-color: rgba(255, 255, 255, 0.959);
   display: flex;
-  width: 90%;
-  height: 70%;
-  border-radius: 30px;
+  width: 70%;
+  height: 60%;
+  border-radius: 10px;
   justify-content: center;
   align-items: center;
   box-shadow: 5px 5px 20px 0px rgba(32, 28, 28, 0.75);
 }
 
 .details-img {
-  /* background-color: aquamarine; */
   display: flex;
   flex-direction: column;
   float: left;
-  width: 50%;
-  height: 100%;
+  width: 200px;
+  height: 250px;
   overflow: hidden;
   justify-content: center;
   align-items: center;
 }
 
 .details-img img {
-  width: 70%;
-  height: 100%;
-  padding: 50px;
-  /* background-color: #000000; */
-  align-items: center;
-  object-fit: cover;
+  mix-blend-mode: multiply;
+  width: 90%;
+  height: 80%;
 }
 
 .details-main {
-  background-color: rgba(83, 165, 165, 0.363);
   display: flex;
   float: left;
   flex-direction: column;
-  width: 50%;
-  height: 100%;
-  padding: 50px;
+  width: 60%;
+  height: 90%;
   transition: opacity 0.3s;
 }
 .details-info {
-  /* background-color: rgb(255, 0, 0); */
   display: flex;
   float: left;
   width: 100%;
-  height: 50%;
+  height: 100%;
+  align-items: left;
+  justify-content: left;
+  text-align: left;
+}
+.Actions {
+  display: flex;
+  float: left;
+  margin-left: 20px;
+  width: 100%;
+  height: 10%;
+  align-items: center;
+  justify-content: center;
 }
 
+.Text {
+  color: grey;
+  font-size: 15px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  word-spacing: normal;
+  line-height: 1;
+}
 .details-info ul li {
-  line-height: 1.5;
+  color: rgb(44, 48, 94);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 2;
   word-spacing: 2px;
   list-style: none;
   display: flex;
@@ -90,23 +106,54 @@
   justify-content: center;
 }
 
-.details-action {
-  /* background-color: rgb(165, 127, 255); */
-  display: flex;
-  flex-direction: column;
-  float: left;
-  width: 100%;
-  height: 50%;
-  align-items: center;
-}
-
 .details-action ul {
   list-style: none;
 }
 
 .bold-text {
-  color: rgb(2, 53, 53);
+  color: rgb(41, 49, 153);
   align-items: baseline;
-  font-size: 25px;
+  font-size: 17px;
   font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.details-menu {
+  background-color: #ddd7d7d0;
+  margin-top: 50px;
+  width: 1350px;
+  height: 30%;
+}
+
+.details-menu ul {
+  display: flex;
+  color: rgb(44, 48, 94);
+  gap: 10rem;
+  font-size: 20px;
+  margin-left: 200px;
+  justify-content: flex-start;
+  font-weight: 400;
+  text-decoration: none;
+  list-style: none;
+}
+
+.details-menu li span {
+  display: none;
+  text-decoration: none;
+  text-align: left;
+  font-size: 15px;
+}
+.details-menu li:hover {
+  color: rgb(156, 53, 130);
+  cursor: pointer;
+}
+
+.details-menu li:hover span {
+  display: block;
+  position: absolute;
+  line-height: 1.5;
+  font-size: medium;
+  color: rgb(156, 53, 130);
+  cursor: pointer;
+  text-decoration: none;
 }

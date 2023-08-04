@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 import { E_URL } from "../url.js";
 import "../Styles/productStyle.css";
 
+import "bootstrap/dist/css/bootstrap.min.css";
+
 export function Products() {
   const [products, setProducts] = useState([]);
 
@@ -14,7 +16,7 @@ export function Products() {
     console.log("useEffect");
     axios
       .get(E_URL, {
-        params: { limit: 6 },
+        params: { limit: 8 },
       })
       .then((res) => {
         setProducts(res.data);
@@ -22,36 +24,40 @@ export function Products() {
       .catch((err) => {
         console.log("Error getting data");
       });
+    //console.log(products);
   }, []);
 
   const Display = (id) => () => {
     console.log("Display", id);
+
     navigate("/details", { state: { id } });
   };
 
   return (
-    <div className="PRODUCTS">
-      <h3>Products</h3>
-      <div className="products-main">
-        {products.map((product) => {
-          return (
-            <>
-              <div className="product-container" key={product.id}>
-                <div className="product-img">
-                  <img src={product.image} alt={product.title} />
+    <>
+      <div className="PRODUCTS">
+        <h2>Eco-Friendly Products</h2>
+        <div className="products-main">
+          {products.map((product) => {
+            return (
+              <>
+                <div className="CARD" onClick={Display(product.id)}>
+                  <div className="product-container" key={product.id}>
+                    <div className="product-img">
+                      <img src={product.image} alt={product.title} />
+                    </div>
+                  </div>
+                  <div className="Info">
+                    <span>{product.title}</span>
+                    <br />
+                    <span className="Price">${product.price}</span>
+                  </div>
                 </div>
-                <div className="product-info">
-                  <p>{product.title}</p>
-                  <p>price: {product.price}$</p>
-                  <button className="Button" onClick={Display(product.id)}>
-                    View More
-                  </button>
-                </div>
-              </div>
-            </>
-          );
-        })}
+              </>
+            );
+          })}
+        </div>
       </div>
-    </div>
+    </>
   );
 }

@@ -7,12 +7,14 @@ import { Footer } from "../components/footer";
 
 export const Dashboard = ({ children }) => {
   return (
-    <div className="DASHBOARD">
-      <Navbar />
-      <div className="dashboard-main">{children}</div>
-      <footer>
+    <>
+      <div className="DASHBOARD">
+        <Navbar />
+        <div className="dashboard-main">{children}</div>
+      </div>
+      {/* <footer>
         <Footer />
-      </footer>
-    </div>
+      </footer> */}
+    </>
   );
 };

@@ -28,7 +28,7 @@ export function Login() {
       .get(U_URL)
       .then((response) => {
         setData(response.data);
-        console.log(response.data);
+        //console.log(response.data);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
@@ -37,9 +37,9 @@ export function Login() {
 
   useEffect(() => {
     if (loggedIn) {
-      console.log("Logged in: ", isAdmin);
+      //console.log("Logged in: ", isAdmin);
       dispatch(loginUser(userID, enteredEmail, isAdmin));
-      console.log(userLogged);
+      //console.log(userLogged);
 
       navigate("/user");
     }
@@ -112,10 +112,10 @@ export function Login() {
             </Link>
           </label>
           <br />
-          <button className="Button" onClick={authenticate}>
+          <button className="Button-LS" onClick={authenticate}>
             Login
           </button>
-          <button className="Button" onClick={() => navigate("/")}>
+          <button className="Button-LS" onClick={() => navigate("/")}>
             Home
           </button>
         </div>
