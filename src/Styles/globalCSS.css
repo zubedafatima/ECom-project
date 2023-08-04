@@ -1,0 +1,156 @@
+.App-body {
+  font-family: "Helvetica Neue", sans-serif;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+.NAV {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px;
+  display: flex;
+  font-family: "Helvetica Neue", sans-serif;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.NAV ul {
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+  gap: 5rem;
+  font-size: 20px;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.NAV a {
+  text-decoration: none;
+  color: #ffffff;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.HOME {
+  color: #080808;
+  align-content: center;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.dashboard-main {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.USER {
+  background-color: #ffffffb2;
+  align-content: center;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  height: 100%;
+  padding: 5%;
+}
+.USER_container {
+  height: fit-content;
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  width: 30%;
+  margin: 0 auto;
+  background-color: rgba(83, 165, 165, 0.363);
+  box-shadow: 0 0 36px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid hsla(0, 0%, 65%, 0.158);
+}
+
+.Container {
+  height: fit-content;
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  width: 30%;
+  margin: 0 auto;
+  background-color: rgba(83, 165, 165, 0.363);
+  box-shadow: 0 0 36px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid hsla(0, 0%, 65%, 0.158);
+}
+
+.form {
+  justify-content: center;
+}
+
+.Button {
+  background-color: #ffffffa9;
+  color: #ffffff;
+  display: block;
+  padding: 13px;
+  border-radius: 5px;
+  outline: none;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  width: 40%;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  transition: all 0.1s ease-in-out;
+  border: none;
+}
+
+.Button:hover {
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02);
+}
+.Input {
+  display: block;
+  padding: 14.5px;
+  width: 100%;
+  margin: 2rem 0;
+  color: #000000;
+  background-color: #ffffffa9;
+  border-style: solid;
+  border-color: #3f3238c9;
+  border-width: 1px;
+  border-radius: 5px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  font-size: 15px;
+  backdrop-filter: blur(15px);
+}
+
+Input:focus {
+  box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.349);
+  animation: wobble 0.3s ease-in;
+}
+
+.HOME {
+  padding-top: 50px;
+}
+
+.LINK {
+  color: gray;
+  font-weight: bold;
+  text-decoration: none;
+}
