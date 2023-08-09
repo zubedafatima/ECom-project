@@ -3,8 +3,11 @@
 //wrapping the jsx element in the Dashboard component to send as a child
 import React from "react";
 import { Dashboard } from "../layout/Dashboard";
-import { Products } from "../components/products";
 import { Link } from "react-router-dom";
+import { Suspense, lazy } from "react";
+
+const ProductsComponent = lazy(() => import("../components/products"));
+//lazy loading wont specifically work for our case because main delay is caused by API calls and not componenet rendering
 
 export const Home = () => {
   return (
@@ -27,7 +30,9 @@ export const Home = () => {
             </Link>
           </li>
         </ul>
-        <Products />
+        <Suspense fallback={<div>Loading...</div>}>
+          <ProductsComponent />
+        </Suspense>
       </div>
     </Dashboard>
   );

@@ -1,7 +1,9 @@
 import { Dashboard } from "../layout/Dashboard";
 import { logoutUser } from "../redux/Actions/userActions"; // Import action types
+import { clearCart } from "../redux/Actions/cartActions"; // Import action types
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import "../Styles/loginStyle.css";
 
 export function User() {
   const dispatch = useDispatch();
@@ -16,17 +18,23 @@ export function User() {
 
   function handleLogout() {
     dispatch(logoutUser());
+    dispatch(clearCart());
     navigate("/login");
   }
 
   return (
     <Dashboard>
-      <div className="USER">
-        <div className="USER_container">
-          <h1>User Details</h1>
-          <h2>Email:{user.email}</h2>
-          <h2>Admin:{user.isAdmin ? "Yes" : "No"}</h2>
-          <button className="Button" onClick={handleLogout}>
+      <div className="Login">
+        <div className="Container">
+          <h2>User Details</h2>
+          <br />
+          <span className="login-Head">Email: {user.email}</span>
+          <br />
+          <span className="login-Head">
+            Admin: {user.isAdmin ? "Yes" : "No"}
+          </span>
+          <br />
+          <button className="Button-LS" onClick={handleLogout}>
             Logout
           </button>
         </div>

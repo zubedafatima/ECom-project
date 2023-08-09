@@ -18,20 +18,16 @@ export function AllUsers() {
   }, []);
   return (
     <Dashboard>
-      <div className="ALL-USERS">
+      <div className="Login">
         <h1>ALL USERS</h1>
         <div className="Container">
           <div className="row">
             {data.map((user) => (
-              <div className="col-sm-4" key={user.id}>
+              <div className="Users" key={user.id}>
                 <div className="card">
-                  <div className="card-body">
-                    <h2 className="card-text">
-                      {user.id}-Username:{user.username}
-                    </h2>
-                    <p className="card-text">Email:{user.email}</p>
-                    <p className="card-text">Phone:{user.phone}</p>
-                  </div>
+                  <p className="login-Head">Username:{user.username}</p>
+                  <p className="login-Head">Email:{user.email}</p>
+                  <p className="login-Head">Phone:{user.phone}</p>
                 </div>
               </div>
             ))}

@@ -4,16 +4,17 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { E_URL } from "../url.js";
 import "../Styles/productStyle.css";
+import { Load } from "./loading.js";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
-export function Products() {
+export default function Products() {
   const [products, setProducts] = useState([]);
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log("useEffect");
+    //console.log("useEffect");
     axios
       .get(E_URL, {
         params: { limit: 8 },
@@ -28,15 +29,19 @@ export function Products() {
   }, []);
 
   const Display = (id) => () => {
-    console.log("Display", id);
+    //console.log("Display", id);
 
     navigate("/details", { state: { id } });
   };
 
+  if (products.length === 0) {
+    return <Load />;
+  }
   return (
     <>
       <div className="PRODUCTS">
         <h2>Eco-Friendly Products</h2>
+
         <div className="products-main">
           {products.map((product) => {
             return (

@@ -8,7 +8,7 @@ import { Protected } from "./components/authenticated";
 import { Register } from "./pages/register";
 import { AllUsers } from "./pages/allUsers";
 import { Detail } from "./layout/details";
-import { Products } from "./components/products";
+import Products from "./components/products";
 import { About } from "./pages/about";
 import { Contact } from "./pages/contact";
 
